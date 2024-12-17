@@ -10,8 +10,8 @@ Output savings
 '''
 
 #Prompt user for monthly income and monthly expense
-monthly_income = int(input("Enter your monthly income: "))
-monthly_expense = int(input("Enter your total monthly expenses: "))
+monthly_income = float(input("Enter your monthly income: "))
+monthly_expense = float(input("Enter your total monthly expenses: "))
 
 #calculate the monthly savings 
 monthly_savings = monthly_income - monthly_expense
