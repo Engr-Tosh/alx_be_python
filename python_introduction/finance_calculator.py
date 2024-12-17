@@ -11,13 +11,15 @@ Output savings
 
 #Prompt user for monthly income and monthly expense
 monthly_income = float(input("Enter your monthly income: "))
-monthly_expense = float(input("Enter your total monthly expenses: "))
+monthly_expenses = float(input("Enter your total monthly expenses: "))
+
 
 #calculate the monthly savings 
-monthly_savings = monthly_income - monthly_expense
+monthly_savings = monthly_income - monthly_expenses
+float(monthly_savings)
 
 #Project annual savings (Projected Savings = Monthly Savings * 12 + (Monthly Savings * 12 * rate))
 projected_savings = monthly_savings * 12 + (monthly_savings * 12 * 0.05)
-
+float(projected_savings)
 print("Your monthly savings are $", monthly_savings,)
 print("Projected savings after one year, with interest, is: $", projected_savings,)
