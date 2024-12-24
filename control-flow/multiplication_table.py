@@ -6,6 +6,6 @@ number = int(input("Enter a number to see its multiplication table: "))
 
 #generate multiplication table using for loops
 for num in range(1, 11):
-    product = number * num
+    product = float(number * num)
     print(number, "*", num, "=", product)
     
