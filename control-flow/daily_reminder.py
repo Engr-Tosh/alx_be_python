@@ -1,9 +1,9 @@
 #A script to set daily reminder based on user input task 
 
 #prompt user for a single task
-task = input("Enter your task?: ").lower()
-priority = input("Priority level? (high/medium/low): ").lower()
-time_bound = input("Is it time bound? (yes/no): ").lower()
+task = input("Enter your task?: ")
+priority = input("Priority level? (high/medium/low): ")
+time_bound = input("Is it time bound? (yes/no): ")
 
 print()
 match priority:
