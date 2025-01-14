@@ -23,6 +23,6 @@ elif 'C' == temp_unit:
     result = convert_to_fahrenheit(temp)
     print(f"{temp}°C is {result}°F")
 else:
-    print("Invalid input")
+    print("Invalid temperature. Please enter a numeric value")
 
 
