@@ -16,6 +16,7 @@ def convert_to_fahrenheit(celsius):     #formula to convert from celsius to fahr
     return (temp * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 #User interaction and control flow    
+
 if 'F' == temp_unit:
     result = convert_to_celsius(temp)
     print(f"{temp}°F is {result}°C")
@@ -23,6 +24,6 @@ elif 'C' == temp_unit:
     result = convert_to_fahrenheit(temp)
     print(f"{temp}°C is {result}°F")
 else:
-    print("Invalid temperature. Please enter a numeric value")
+    print("Invalid temperature. Please enter a numeric value.")
 
 
