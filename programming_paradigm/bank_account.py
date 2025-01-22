@@ -20,10 +20,10 @@ class BankAccount:
             return False
     
     def current_balance(self):
-        new_balance = float(self.initial_balance + self.account_balance)
-        return new_balance
+        self.new_balance = float((self.initial_balance + self.account_balance))
+        return self.new_balance
         
 
     def display_balance(self):
-        print(f"Current Balance: ${self.current_balance()}")
+        print(f"Current Balance: ${self.current_balance()}0")
         
