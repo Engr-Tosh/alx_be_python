@@ -1,7 +1,7 @@
 #Creating a simple bank account class
 
 #Define the bank acoount class
-class BankAccount():
+class BankAccount:
     #Use __init__ method to initialize acc blc attribute
     def __init__(self, account_balance):
         self.account_balance = account_balance
