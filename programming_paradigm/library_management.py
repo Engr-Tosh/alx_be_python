@@ -5,13 +5,13 @@ class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
-        self._is_checked_out = bool
+        self._is_checked_out = False   #Track if the book is checked'''
            
     def check_out(self):
-        self._is_checked_out = True              
+        self._is_checked_out = True   #'''Marks the book as checked therefore not available'''           
 
     def return_book(self):
-        self._is_checked_out = False      
+        self._is_checked_out = False      #'''Marks the book as available'''
     
 
 class Library:
@@ -21,13 +21,27 @@ class Library:
         self._books = []       #Private list to store Book objects
 
     def add_book(self, book):
-        self._books.append(book)
+        self._books.append(book)      #Ensures that the book is added only once
         
     def check_out_book(self, title):
-        self._books.remove(title)
+        '''Find the book by title'''
+        for book in self._books:
+            if book.title == title and not book._is_checked_out:
+                book.check_out()
+                return
+            
 
     def return_book(self, title):
-        self._books.append(title)
+        for book in self._books:
+            if book.title == title and book._is_checked_out:
+                book.return_book()
+                return
 
     def list_available_books(self):
-        return self._books
+        #list of books that are not checked out
+        available_books = [book for book in self._books if not book._is_checked_out]
+        if available_books:
+            for book in available_books:
+                print(f"{book.title} by {book.author}")
+        else:
+            print("No books available")
