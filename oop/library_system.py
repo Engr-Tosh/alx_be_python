@@ -18,7 +18,7 @@ class EBook(Book):
         self.file_size = int(file_size)
 
     def __str__(self):
-        return f"{self.title} by {self.author}, File Size: {self.file_size}"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}"
         
         
 class PrintBook(Book):
@@ -27,16 +27,17 @@ class PrintBook(Book):
         self.page_count = int(page_count)
 
     def __str__(self):
-        return f"{self.title} by {self.author}, Page Count: {self.page_count}"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 #Creating class to demonstrate composition
 class Library:
-    def __init__(self):
-
-        self.books = []     #A list to store te instances of Book, EBook and Printbook
-
+    def __init__(self):    
+        #A list to store te instances of Book, EBook and Printbook
+        self.books = []
+    
     def add_book(self, book):
         self.books.append(book)
 
     def list_books(self):
-        print(self.books)
+        for book in self.books:
+            print(book)     #This calls the __str__ method of each class properly
